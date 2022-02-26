@@ -55,7 +55,7 @@ this app displays 10 pics on screen a user can press the button down to road mor
 
 - icon installation
 
-  ![alt text](public/servive.png)
+  ![alt text](public/service.png)
 
 - service worker and offline support support
 
