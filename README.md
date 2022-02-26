@@ -4,6 +4,8 @@ This is a wedding pictures app where each user submits pictures of the bride and
 
 this app can be installed as a native app, on android, ios and desktops
 
+this app displays 10 pics on screen a user can press the button down to road more pictures.
+
 ## Quick Start
 ### installation
 
@@ -14,25 +16,30 @@ this app can be installed as a native app, on android, ios and desktops
    - create account on cloudinary [cloudinary](https://cloudinary.com/)
    - follow the step bellow
 
-   1. signup to cloudinary
+   1. signup to cloudinary.
+
    ![alt signup](public/cloud0.png)
 
-   2. go to setting in up right corner --> upload
+   2. go to setting in up right corner --> upload.
    ![alt text](public/cloud1.png)
 
-   3. add upload preset
+   3. add upload preset.
    ![alt text](public/cloud2.png)
 
-   4. choose name of your choice --> set signing mode to unsigned 
+   4. choose name of your choice --> set signing mode to unsigned.
+
    ![alt text](public/cloud3.png)
 
-   5. result will be like this
+   5. result will be like this.
+
    ![alt text](public/cloud4.png)
 
-   6. copy credential and pase in the env file
+   6. copy credential and pase in the env file.
+
    ![alt text](public/cloud5.png)
 
-   7. create a file `.env.local` into your root
+   7. create a file `.env.local` into your root.
+
    ![alt text](public/env.png)
 
 3. go to src--> pages --> index.js and add your cloudinary name and upload preset name like this:
@@ -42,6 +49,21 @@ this app can be installed as a native app, on android, ios and desktops
 4. run `npm install`
 5. run `npm run build`
 6. run `npm run dev`
+
+
+### Live app
+
+- icon installation
+
+  ![alt text](public/servive.png)
+
+- service worker and offline support support
+
+  ![alt text](public/offline.png)
+
+- manifest
+
+ ![alt text](public/iconinsta.png)
 
 ## Technology
 - react [react](https://reactjs.org/)
