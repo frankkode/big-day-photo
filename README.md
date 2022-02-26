@@ -1,8 +1,6 @@
 # Wedding Pictures
 
-wedding app is a wedding pictures app where different users can submit images to the bride and groom.
-
-this app catch caches first using swervice worker and nextjs pwa, means it can work online and offline, users will be able to see pictures and upload pictures even if there are offline.
+This is a wedding pictures app where each user submits pictures of the bride and groom. This app catches caches using service worker and next js PWA, so it works both online and offline. The users can see pictures and upload pictures even if there is no internet connection.
 
 this app can be installed as a native app, on android, ios and desktops
 
