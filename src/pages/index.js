@@ -83,7 +83,7 @@ export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUpl
     setSelectedImg(selectedImg);
 
   }
-  
+  // return to main page
 
   return (
     <Layout>

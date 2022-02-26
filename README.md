@@ -11,25 +11,25 @@
    - follow the step bellow
 
    1. signup to cloudinary
-   ![alt signup](cloud0.png)
+   ![alt signup](public/cloud0.png)
 
    2. go to setting --> upload
-   ![alt text](cloud1.png)
+   ![alt text](public/cloud1.png)
 
    3. add upload preset
-   ![alt text](cloud2.png)
+   ![alt text](public/cloud2.png)
 
    4. choose name of your choice --> set signing mode to unsigned 
-   ![alt text](cloud3.png)
+   ![alt text](public/cloud3.png)
 
    5. result will be like this
-   ![alt text](cloud4.png)
+   ![alt text](public/cloud4.png)
 
    6. copy credential and pase in the env file
-   ![alt text](cloud5.png)
+   ![alt text](public/cloud5.png)
 
    7. create a file `.env.local` into your root
-   ![alt text](env.png)
+   ![alt text](public/env.png)
 
 3. go to src--> pages --> index.js and add your cloudinary name and upload preset name like this
 ` 
@@ -46,7 +46,7 @@
   ` 
 
   - to src--> pages --> index.js and add your cloudinary name and upload preset name like this
-   ![alt text](code.png) 
+   ![alt text](public/code.png) 
 
 4. run `npm install`
 5. run `npm run build`
