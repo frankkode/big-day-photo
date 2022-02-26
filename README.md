@@ -52,6 +52,9 @@ this app displays 10 pics on screen a user can press the button down to road mor
 
 
 ### Live app
+- live app and image model
+
+  ![alt text](public/model.gif)
 
 - icon installation
 

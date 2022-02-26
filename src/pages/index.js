@@ -130,7 +130,11 @@ export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUpl
                   <motion.div className={styles.imageImage} initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1 }}>
-                    <Image className={styles.imageMain} height="500" width="500" src={image.image} alt="image" />
+                    <Image className={styles.imageMain} src={image.image} crop="scale"
+                      width="300"
+                      height="200"
+                      dpr="auto"
+                      responsive_placeholder="blank" alt="image" />
                   </motion.div>
                 </a>
               </motion.li>
