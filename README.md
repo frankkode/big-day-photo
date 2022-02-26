@@ -61,9 +61,23 @@ this app displays 10 pics on screen a user can press the button down to road mor
 
   ![alt text](public/offline.png)
 
+- offline persistance
+
+ ![alt text](public/offline.gif)
+
 - manifest
 
  ![alt text](public/iconinsta.png)
+
+- installed app on mac
+
+ ![alt text](public/install.png)
+
+- open installed app
+
+ ![alt text](public/install.gif)
+
+
 
 ## Technology
 - react [react](https://reactjs.org/)
