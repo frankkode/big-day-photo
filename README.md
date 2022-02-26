@@ -1,5 +1,11 @@
 # Wedding Pictures
 
+wedding app is a wedding pictures app where different users can submit images to the bride and groom.
+
+this app catch caches first using swervice worker and nextjs pwa, means it can work online and offline, users will be able to see pictures and upload pictures even if there are offline.
+
+this app can be installed as a native app, on android, ios and desktops
+
 ## Quick Start
 ### installation
 
@@ -13,7 +19,7 @@
    1. signup to cloudinary
    ![alt signup](public/cloud0.png)
 
-   2. go to setting --> upload
+   2. go to setting in up right corner --> upload
    ![alt text](public/cloud1.png)
 
    3. add upload preset
@@ -31,21 +37,8 @@
    7. create a file `.env.local` into your root
    ![alt text](public/env.png)
 
-3. go to src--> pages --> index.js and add your cloudinary name and upload preset name like this
-` 
-    formData.append('upload_preset', 'ADD_YOUR_UPLOAD_PRESET_NAME_HERE');
+3. go to src--> pages --> index.js and add your cloudinary name and upload preset name like this:
 
-    const data = await fetch('https://api.cloudinary.com/v1_1/ADD_YOUR_CLOUDINARY_NAME_HERE/image/upload', {
-      method: 'POST',
-      body: formData
-    }).then(r => r.json());
-
-    setImageSrc(data.secure_url);
-    setUploadData(data);
-  
-  ` 
-
-  - to src--> pages --> index.js and add your cloudinary name and upload preset name like this
    ![alt text](public/code.png) 
 
 4. run `npm install`
