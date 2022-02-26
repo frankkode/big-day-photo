@@ -63,7 +63,7 @@ this app displays 10 pics on screen a user can press the button down to road mor
 
 - offline persistance
 
- ![alt text](public/offline.gif)
+ ![alt text](public/offline2.gif)
 
 - manifest
 
