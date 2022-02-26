@@ -4,12 +4,10 @@
 
   font-size: 1em;
   color: white;
-  background-color: $color-button-background;
+  background-color: orangered;
   border: 0;
-  font-weight: $font-weight-black;
   text-transform: uppercase;
   padding: .6em 1em;
-  border-radius: $border-radius-small;
   cursor: pointer;
 
   &:hover {

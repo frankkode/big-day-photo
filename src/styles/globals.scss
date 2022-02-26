@@ -48,57 +48,39 @@ img {
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
   border: 3px solid white;
 }
-.imgwrap{
-  overflow: hidden;
-  height: 0;
-  padding: 50% 0;
-  /* padding controls height, will always be perfectly square regardless of width */
-  position: relative;
-  opacity: 0.8;
-}
-.imgwrap img{
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 150%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 img:hover {
   cursor: pointer;
 }
-
-/* pwa notification*/
-
-
-.offline-notification_explanation {
-  display: none;
-  background: inherit;
-  padding-top: 1em;
+/* upload form styles */
+form{
+  margin: 30px auto 10px;
+  text-align: center;
+}
+label:hover {
+  cursor: pointer;
+}
+label input{
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+label{
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(230, 210, 168);
+  border-radius: .5em;
+  margin: 10px auto;
+  line-height: 35px;
+  color: rgb(252, 251, 249);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  background: rgb(245, 141, 6);
 }
 
-.cta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.offline-msg {
-  display: none;
-}
-
-.offline {
-  .offline-notification {
-    transition: transform 0.3s;
-    transform: translateY(0) translateX(-50%);
-  }
-  
-  .online-msg {
-    display: none;
-  }
-  
-  .offline-msg {
-    display: block;
-  }
+label:hover{
+  background: rgb(202, 101, 64);
+  color: rgb(252, 251, 251);
+  font-weight: bold;
+  font-size: 40px;
 }

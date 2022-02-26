@@ -15,7 +15,9 @@
   margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 2em;
+  grid-gap: 1em;
+  border: 3px solid rgb(233, 233, 233);
+  border-radius: 3px;
 }
 
 .imageTitle {
@@ -30,7 +32,11 @@
   }
 
 }
-
+.imageMain{
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 50% 0;
+  }
 .container {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -55,14 +61,10 @@
 }
 
 
-.form {
-
-  [type="file"] {
-    font-size: 1em;
-    padding: 1em;
-    border: solid 1px gray;
-    border-radius: .5em;
+.form {   
+  margin-top: 40px;
+  border-radius: .5em;
   }
-}
+
 
 

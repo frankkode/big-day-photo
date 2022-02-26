@@ -14,6 +14,7 @@ import { search, mapImageResources } from '../lib/cloudinary';
 import styles from '@styles/Home.module.scss'
 
 
+
 export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUploadData, images: defaultImages, nextCursor: defaultNextCursor }) {
   const [imageSrc, setImageSrc] = useState(defaultImageSrc);
   const [uploadData, setUploadData] = useState(defaultUploadData);
@@ -21,6 +22,18 @@ export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUpl
   const [selectedImg, setSelectedImg] = useState(null);
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
   const router = useRouter();
+
+
+  function handleOnChange(changeEvent) {
+    const reader = new FileReader();
+
+    reader.onload = function (onLoadEvent) {
+      setImageSrc(onLoadEvent.target.result);
+      setUploadData(undefined);
+    }
+
+    reader.readAsDataURL(changeEvent.target.files[0]);
+  }
 
   async function handleOnSubmit(event) {
     event.preventDefault();
@@ -70,6 +83,7 @@ export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUpl
     setSelectedImg(selectedImg);
 
   }
+  
 
   return (
     <Layout>
@@ -91,15 +105,16 @@ export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUpl
             </h1>
 
             <form className={styles.form} method="post" onChange={handleOnChange} onSubmit={handleOnSubmit} >
-              <p>
-                <input type="file" multiple name="file" />
-              </p>
+              <label>
+                <input type="file" name="file" />
+                <span>+</span>
+              </label>
 
               <img src={imageSrc} />
 
               {imageSrc && !uploadData && (
                 <p>
-                  <button>Upload Images</button>
+                  <button >Upload Images</button>
                 </p>
               )}
             </form>
@@ -115,7 +130,7 @@ export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUpl
                   <motion.div className={styles.imageImage} initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1 }}>
-                    <Image height="500" width="500" src={image.image} alt="image" />
+                    <Image className={styles.imageMain} height="500" width="500" src={image.image} alt="image" />
                   </motion.div>
                 </a>
               </motion.li>
@@ -130,16 +145,6 @@ export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUpl
       </Container>
     </Layout>
   )
-  function handleOnChange(changeEvent) {
-    const reader = new FileReader();
-
-    reader.onload = function (onLoadEvent) {
-      setImageSrc(onLoadEvent.target.result);
-      setUploadData(undefined);
-    }
-
-    reader.readAsDataURL(changeEvent.target.files[0]);
-  }
 }
 
 
@@ -152,7 +157,7 @@ export async function getStaticProps() {
   return {
     props: {
       images,
-      nextCursor
+      nextCursor: nextCursor || false
     }
   }
 }
