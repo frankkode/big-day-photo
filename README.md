@@ -34,11 +34,11 @@ this app displays 10 pics on screen a user can press the button down to road mor
 
    ![alt text](public/cloud4.png)
 
-   6. copy credential and pase in the env file.
+   6.Go to dashbord copy credential.
 
    ![alt text](public/cloud5.png)
 
-   7. create a file `.env.local` into your root.
+   7. create a file `.env.local` into your root add credential in env file.
 
    ![alt text](public/env.png)
 
