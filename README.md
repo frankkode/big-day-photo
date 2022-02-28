@@ -1,3 +1,4 @@
+# Progressive web app
 # Wedding Pictures
 
 This is a wedding pictures app where each user submits pictures of the bride and groom. This app catches caches using service worker and next js PWA, so it works both online and offline. The users can see pictures and upload pictures even if there is no internet connection.
