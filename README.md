@@ -12,13 +12,12 @@ this app displays 10 pics on screen a user can press the button down to road mor
 Mobile View.
    ![alt text](public/home.png)
 
-go to setting in up right corner --> upload.
-   ![alt text](public/cloud1.png)
 
 Image capture
    ![alt text](public/camera.png)
 
-
+This App is progressive web app (PWA)
+   ![alt text](public/pwa.png)
 
 ## Quick Start
 ### installation
