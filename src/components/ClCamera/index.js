@@ -120,7 +120,7 @@ class camera extends Component {
           } else {
                this.setState({ uploading: true });
                axios
-                    .post(`https://api.cloudinary.com/v1_1/dw8s775hb/image/upload`, {
+                    .post(`https://api.cloudinary.com/v1_1/wedding-pics/image/upload`, {
                          file: this.state.imageDataURL,
                          upload_preset: "weddingupload"
                     })
