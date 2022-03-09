@@ -53,7 +53,7 @@ Image capture
 
    ![alt text](public/env.png)
 
-3. go to src--> pages --> index.js and add your cloudinary name and upload preset name like this:
+3. go to src--> components -->ClCamera --> index.js and add your cloudinary name and upload preset name like this:
 
    ![alt text](public/code.png) 
 
