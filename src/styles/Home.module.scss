@@ -20,11 +20,6 @@
   border-radius: 3px;
 }
 
-.imageTitle {
-  font-size: 1.4em;
-  margin: .4em 0 0;
-}
-
 .imageImage {
 
   & > div {
@@ -57,14 +52,11 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 5px;
 }
 
-
-.form {   
-  margin-top: 40px;
-  border-radius: .5em;
-  }
 
 
 

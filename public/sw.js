@@ -19,11 +19,7 @@ self.addEventListener("install", function (event) {
           'https://unpkg.com/cloudinary-core@2.3.0/cloudinary-core.js',
           'https://unpkg.com/cloudinary-react@1.0.3/dist/cloudinary-react.js',
           'https://unpkg.com/axios/dist/axios.min.js',
-          'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css',
-          // Local assets
-          '/style.css',
-          // Fake API
-          '/images.json'
+          'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'
      ];
 
      // A new ServiceWorker has been registered

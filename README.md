@@ -7,6 +7,19 @@ this app can be installed as a native app, on android, ios and desktops
 
 this app displays 10 pics on screen a user can press the button down to road more pictures.
 
+## HOME
+
+Mobile View.
+   ![alt text](public/home.png)
+
+go to setting in up right corner --> upload.
+   ![alt text](public/cloud1.png)
+
+Image capture
+   ![alt text](public/camera.png)
+
+
+
 ## Quick Start
 ### installation
 
@@ -90,7 +103,7 @@ this app displays 10 pics on screen a user can press the button down to road mor
 - typescript [typescript](https://www.typescriptlang.org/)
 - cloudinary [cloudinary](https://cloudinary.com/)
 - framer-motion [framer-motion](https://www.framer.com/motion/)
-- sass [sass](https://sass-lang.com/)
+- sass [scss](https://sass-lang.com/documentation/syntax)
 
 
 

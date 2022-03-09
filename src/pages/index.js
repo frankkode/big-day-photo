@@ -1,62 +1,25 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
-
 import Layout from '@components/Layout';
 import Container from '@components/Container';
 import Modal from '@components/Model';
 import Button from '@components/Button';
 import { motion } from 'framer-motion';
-import { useRouter } from "next/router";
 
+import Camera from "@components/Camera";
 import { search, mapImageResources } from '../lib/cloudinary';
-
 import styles from '@styles/Home.module.scss'
 
 
-
-export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUploadData, images: defaultImages, nextCursor: defaultNextCursor }) {
-  const [imageSrc, setImageSrc] = useState(defaultImageSrc);
-  const [uploadData, setUploadData] = useState(defaultUploadData);
+export default function Home({ images: defaultImages, nextCursor: defaultNextCursor }) {
   const [images, setImages] = useState(defaultImages);
   const [selectedImg, setSelectedImg] = useState(null);
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
-  const router = useRouter();
-
-
-  function handleOnChange(changeEvent) {
-    const reader = new FileReader();
-
-    reader.onload = function (onLoadEvent) {
-      setImageSrc(onLoadEvent.target.result);
-      setUploadData(undefined);
-    }
-
-    reader.readAsDataURL(changeEvent.target.files[0]);
+  const refreshPage = () => {
+    window.location.reload();
   }
 
-  async function handleOnSubmit(event) {
-    event.preventDefault();
-
-    const form = event.currentTarget;
-    const fileInput = Array.from(form.elements).find(({ name }) => name === 'file');
-
-    const formData = new FormData(window.location.reload());
-
-    for (const file of fileInput.files) {
-      formData.append('file', file);
-    }
-
-    formData.append('upload_preset', 'weddingupload');
-
-    const data = await fetch('https://api.cloudinary.com/v1_1/dw8s775hb/image/upload', {
-      method: 'POST',
-      body: formData
-    }).then(r => r.json());
-
-    setImageSrc(data.secure_url);
-    setUploadData(data);
-  }
 
   async function handleOnLoadMore(e) {
     e.preventDefault();
@@ -103,21 +66,9 @@ export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUpl
             <h1 className={styles.title}>
               Wedding Images
             </h1>
+            <Camera />
+            <button className='closeButton' onClick={refreshPage}>Close Camera</button>
 
-            <form className={styles.form} method="post" onChange={handleOnChange} onSubmit={handleOnSubmit} >
-              <label>
-                <input type="file" name="file" />
-                <span>+</span>
-              </label>
-
-              <img src={imageSrc} />
-
-              {imageSrc && !uploadData && (
-                <p>
-                  <button >Upload Images</button>
-                </p>
-              )}
-            </form>
           </main>
         </div>
 
@@ -131,7 +82,7 @@ export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUpl
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1 }}>
                     <Image className={styles.imageMain} src={image.image}
-                      width="350"
+                      width="400"
                       height="280"
                       responsive_placeholder="blank" alt="image" />
                   </motion.div>
@@ -142,9 +93,9 @@ export default function Home({ imageSrc: defaultImageSrc, uploadData: defaultUpl
           })}
         </motion.ul>
         {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}></Modal>}
-        <p>
-          <Button onClick={handleOnLoadMore}>Load More Images...</Button>
-        </p>
+        <div className={styles.button}>
+          <Button onClick={handleOnLoadMore}>Load More</Button>
+        </div>
       </Container>
     </Layout>
   )

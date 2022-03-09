@@ -19,8 +19,32 @@ a {
   box-sizing: border-box;
 }
 
-img {
-  max-width: 30%;
+.imageCanvas {
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+}
+video{
+  border-radius: 4px;
+  
+  justify-content: center;
+  display: flex;
+}
+.videocenter{
+  align-items: center;
+  justify-content: center;
+
+}
+.capturedImg{
+  align-items: center;
+  justify-content: center;
+
+}
+img{
+  border-radius: 4px;
 }
 
 .sr-only {
@@ -51,36 +75,64 @@ img {
 img:hover {
   cursor: pointer;
 }
-/* upload form styles */
-form{
-  margin: 30px auto 10px;
-  text-align: center;
-}
-label:hover {
+button:hover{
   cursor: pointer;
 }
-label input{
-  height: 0;
-  width: 0;
-  opacity: 0;
-}
-label{
-  display: block;
-  width: 40px;
-  height: 40px;
-  border: 2px solid rgb(230, 210, 168);
-  border-radius: .5em;
-  margin: 10px auto;
-  line-height: 35px;
-  color: rgb(252, 251, 249);
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 40px;
-  background: rgb(245, 141, 6);
+.captureButton {
+  margin: 10px;
+  padding: 10px;
+  background-color: #4FFBDF;
+  color: white;
+  border-radius: 5px;
 }
 
-label:hover{
-  background: rgb(202, 101, 64);
-  color: rgb(252, 251, 251);
-  font-weight: bold;
-  font-size: 40px;
+.uploadButton {
+  margin: 10px;
+  padding: 10px;
+  background-color: #0066b2;
+  color: white;
+  border-radius: 5px;
 }
+
+.takeButton {
+  margin: 10px;
+  padding: 10px;  
+  background-color: #D65DB1;
+  color: white;
+  border-radius: 5px;
+}
+
+.switchButton {
+  margin: 10px;
+  padding: 10px;
+  background-color: #FF6F91;
+  color: white;
+  border-radius: 5px;
+}
+.closeButton {
+  margin: 10px;
+  padding: 10px;
+  background-color: #008F7A;
+  color: white;
+  border-radius: 5px;
+}
+
+
+.notify{
+  background-color: #00C2A8;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 4px;
+}
+
+.danger{
+  background-color: #FF8066;
+  color: rgb(245, 240, 240);
+  border-radius: 4px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+

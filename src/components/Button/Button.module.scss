@@ -1,15 +1,19 @@
 @import "@styles/settings/__settings";
 
 .button {
-
+	border-radius: 4px;
+	margin-top: 3rem ;
+  margin-bottom: 2rem;
+  margin-left: 50%;
   font-size: 1em;
   color: white;
-  background-color: orangered;
+  background-color: rgb(230, 102, 113);
   border: 0;
   text-transform: uppercase;
-  padding: .6em 1em;
+  padding:  1em;
+  text-align: center;
+  align-items: center;
   cursor: pointer;
-
   &:hover {
     background-color: lighten($color-button-background, 10);
   }
