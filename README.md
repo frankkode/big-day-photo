@@ -102,6 +102,26 @@ Image capture
 - framer-motion [framer-motion](https://www.framer.com/motion/)
 - sass [scss](https://sass-lang.com/documentation/syntax)
 
+## Test
+
+This app was tested om macbook pro 2019
+and iphone 12
+### Test on real Camera
+ ![alt text](public/test4.png)
+
+### test on front camera
+ ![alt text](public/test2.png)
+
+### test for offline notification
+ ![alt text](public/test3.png)
+
+### test for permission notification
+![alt text](public/test1.png)
+
+### test offline persistance(pwa)
+![alt text](public/test5.png)
+
+
 
 
 

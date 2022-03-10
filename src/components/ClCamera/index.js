@@ -114,7 +114,7 @@ class camera extends Component {
 
      uploadImage = () => {
           if (this.props.offline) {
-               console.log("you're using in offline mode sha");
+               console.log("you're using in offline mode");
 
                // save image to local storage
           } else {
@@ -128,10 +128,10 @@ class camera extends Component {
                          this.setState({ uploading: false });
                          if (data.status === 200) {
                               console.log(data);
-                              alert("Image Uploaded successfully");
+                              alert("Picture Uploaded successfully");
                               window.location.reload();
                          } else {
-                              alert("Sorry, we encountered an error uploading your image");
+                              alert("Sorry, we encountered an error uploading your picture");
                               window.location.reload();
                          }
                     })
@@ -141,16 +141,16 @@ class camera extends Component {
      checkUploadStatus = data => {
           this.setState({ uploading: false });
           if (data.status === 200) {
-               alert("Image Uploaded to Cloudinary Media Library");
+               alert("Picture Uploaded bride and groom succesfully");
                this.discardImage();
           } else {
-               alert("Sorry, we encountered an error uploading your image");
+               alert("Sorry, we encountered an error uploading your picture");
           }
      };
 
      render() {
           const playerORImage = Boolean(this.state.imageDataURL) ? (
-              <div className="capturedImg"> <img src={this.state.imageDataURL} alt="cameraPic" /></div>
+               <div className="capturedImg"> <img src={this.state.imageDataURL} alt="cameraPic" /></div>
           ) : (
                <div className="videocenter">
                     <video
@@ -165,12 +165,26 @@ class camera extends Component {
           return (
                <div className="App">
                     {playerORImage}
-                    <button className="takeButton" onClick={this.initializeMedia}>Open Camera</button>
-                    <button className="captureButton" onClick={this.capturePicture}>Capture</button>
-
-                    <button className="uploadButton" onClick={this.uploadImage}> Upload Photo
-                    </button>
-                    <button className="switchButton" onClick={this.switchCamera}>Switch Camera</button>
+                    <div className="BUTTON-START">
+                         <div class="BUTTON1toBUTTON3">
+                              <label>
+                                   <input type="checkbox" />
+                                   <span  onClick={this.initializeMedia}class="seatButton">CAMERA ON</span>
+                              </label>
+                              <span ><img src="https://img.icons8.com/color/25/000000/right--v1.png" /></span>
+                              <label>
+                                   <input type="checkbox" />
+                                   <span onClick={this.capturePicture} class="seatButton">CAPTURE</span>
+                              </label>
+                              <span ><img src="https://img.icons8.com/color/25/000000/right--v1.png" /></span>
+                              <label>
+                                   <input type="checkbox" />
+                                   <span  onClick={this.uploadImage} class="seatButton">SEND PICTURE</span>
+                              </label>
+                              
+                         </div>
+                    </div>
+                    <button className="switchButton" onClick={this.switchCamera}>SWITCH CAMERA</button>
 
 
                </div>

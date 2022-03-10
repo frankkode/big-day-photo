@@ -77,46 +77,45 @@ img:hover {
 }
 button:hover{
   cursor: pointer;
+  background-color: #00C2A8;
 }
-.captureButton {
+.seatButton {
   margin: 10px;
   padding: 10px;
-  background-color: #4FFBDF;
   color: white;
   border-radius: 5px;
+  background-color: #f59265;
+  border: 3px solid rgb(255, 60, 0);
+  font-family: 'Times New Roman', Times, serif;
 }
-
-.uploadButton {
+button{
   margin: 10px;
   padding: 10px;
-  background-color: #0066b2;
   color: white;
   border-radius: 5px;
+  background-color: #f59265;
+  border: 3px solid rgb(255, 60, 0);
 }
 
-.takeButton {
-  margin: 10px;
-  padding: 10px;  
-  background-color: #D65DB1;
-  color: white;
-  border-radius: 5px;
-}
+.BUTTON1toBUTTON3 input { display: none; }
 
-.switchButton {
-  margin: 10px;
+.BUTTON1toBUTTON3 .seatButton { margin: 10px;
   padding: 10px;
-  background-color: #FF6F91;
   color: white;
   border-radius: 5px;
-}
-.closeButton {
-  margin: 10px;
-  padding: 10px;
-  background-color: #008F7A;
-  color: white;
-  border-radius: 5px;
+  background-color: #f59265;
+  border: 3px solid rgb(255, 60, 0); cursor: pointer; }
+
+.BUTTON1toBUTTON3 input:checked + .seatButton { background: rgb(136, 255, 0); }
+.BUTTON1toBUTTON3 .seatButton:hover{
+  background-color: #00C2A8;
 }
 
+.BUTTON-START{
+  background-color:rgb(255, 196, 0);
+  border-radius: 4px;
+  padding: 20px;
+}
 
 .notify{
   background-color: #00C2A8;

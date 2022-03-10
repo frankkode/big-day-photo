@@ -67,7 +67,7 @@ export default function Home({ images: defaultImages, nextCursor: defaultNextCur
               Wedding Images
             </h1>
             <Camera />
-            <button className='closeButton' onClick={refreshPage}>Close Camera</button>
+            <button className='closeButton' onClick={refreshPage}>OFF CAMERA</button>
 
           </main>
         </div>
