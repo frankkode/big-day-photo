@@ -104,7 +104,7 @@ Image capture
 
 ## Test
 
-This app was tested om macbook pro 2019
+This app was tested on macbook pro 2019
 and iphone 12
 ### Test on real Camera
  ![alt text](public/test4.png)
