@@ -169,14 +169,14 @@ class camera extends Component {
                          <div class="BUTTON1toBUTTON3">
                               <label>
                                    <input type="checkbox" />
-                                   <span  onClick={this.initializeMedia}class="seatButton">CAMERA ON</span>
+                                   <span  onClick={this.initializeMedia}class="seatButton">START CAMERA</span>
                               </label>
-                              <span ><img src="https://img.icons8.com/color/25/000000/right--v1.png" /></span>
+                              <span ><img src="https://img.icons8.com/color/15/000000/right--v1.png" /></span>
                               <label>
                                    <input type="checkbox" />
                                    <span onClick={this.capturePicture} class="seatButton">CAPTURE</span>
                               </label>
-                              <span ><img src="https://img.icons8.com/color/25/000000/right--v1.png" /></span>
+                              <span ><img src="https://img.icons8.com/color/15/000000/right--v1.png" /></span>
                               <label>
                                    <input type="checkbox" />
                                    <span  onClick={this.uploadImage} class="seatButton">SEND PICTURE</span>

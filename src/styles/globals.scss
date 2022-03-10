@@ -80,8 +80,9 @@ button:hover{
   background-color: #00C2A8;
 }
 .seatButton {
-  margin: 10px;
+  margin-right: 10px;
   padding: 10px;
+  display: flex;
   color: white;
   border-radius: 5px;
   background-color: #f59265;
@@ -99,9 +100,12 @@ button{
 
 .BUTTON1toBUTTON3 input { display: none; }
 
-.BUTTON1toBUTTON3 .seatButton { margin: 10px;
+.BUTTON1toBUTTON3 .seatButton { 
+  margin: 10px;
   padding: 10px;
   color: white;
+  display: flex;
+  justify-content: center;
   border-radius: 5px;
   background-color: #f59265;
   border: 3px solid rgb(255, 60, 0); cursor: pointer; }
@@ -114,7 +118,8 @@ button{
 .BUTTON-START{
   background-color:rgb(255, 196, 0);
   border-radius: 4px;
-  padding: 20px;
+  display: flex;
+  justify-content: center;  
 }
 
 .notify{
