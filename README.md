@@ -108,31 +108,31 @@ This app was tested on macbook pro 2019
 and iphone 12
 ### Test on real Camera
 
- ![alt text](public/test4.png)
+ ![alt text](public/testa4.png)
 
  -----------------------------------
 
 ### test on front camera
 
- ![alt text](public/test2.png)
+ ![alt text](public/testa2.png)
 
  -----------------------------------
 
 ### test for offline notification
 
- ![alt text](public/test3.png)
+ ![alt text](public/testa3.png)
 
  -----------------------------------
 
 ### test for permission notification
 
-![alt text](public/test1.png)
+![alt text](public/testa1.png)
 
 ------------------------------------
 
 ### test offline persistance(pwa)
 
-![alt text](public/test5.png)
+![alt text](public/testa5.png)
 
 ------------------------------------
 
