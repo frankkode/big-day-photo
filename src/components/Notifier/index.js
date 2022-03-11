@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classnames from 'classnames';
 
-class Notifier extends Component {
+class Notifier extends  React.Component {
      render() {
           const notifyclass = classnames('notify', {
                danger: this.props.offline

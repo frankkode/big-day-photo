@@ -159,20 +159,20 @@ class camera extends Component {
                <div className="App">
                     {playerORImage}
                     <div className="BUTTON-START">
-                         <div class="BUTTON1toBUTTON3">
+                         <div className="BUTTON1toBUTTON3">
                               <label>
                                    <input type="checkbox" />
-                                   <span onClick={this.initializeMedia} class="seatButton">START CAMERA</span>
+                                   <span onClick={this.initializeMedia} className="seatButton">START CAMERA</span>
                               </label>
                               <span ><img src="https://img.icons8.com/external-those-icons-fill-those-icons/15/000000/external-down-arrows-those-icons-fill-those-icons-2.png"/></span>
                               <label>
                                    <input type="checkbox" />
-                                   <span onClick={this.capturePicture} class="seatButton">CAPTURE</span>
+                                   <span onClick={this.capturePicture} className="seatButton">CAPTURE</span>
                               </label>
                               <span ><img src="https://img.icons8.com/external-those-icons-fill-those-icons/15/000000/external-down-arrows-those-icons-fill-those-icons-2.png"/></span>
                               <label>
                                    <input type="checkbox" />
-                                   <span onClick={this.uploadImage} class="seatButton">SEND PICTURE</span>
+                                   <span onClick={this.uploadImage} className="seatButton">SEND PICTURE</span>
                               </label>
 
                          </div>
