@@ -75,11 +75,11 @@ Image capture
 
   ![alt text](public/model.gif)
 
-- icon installation
+- service worker
 
   ![alt text](public/service.png)
 
-- service worker and offline support support
+- offline notification
 
   ![alt text](public/offline.png)
 
