@@ -12,6 +12,22 @@ class camera extends Component {
           };
      }
 
+     CONSTRAINTS = {
+          audio: {
+               autoGainControl: false,
+               channelCount: 2,
+               echoCancellation: true,
+               noiseSuppression: true,
+               sampleRate: 48000,
+               sampleSize: 16,
+          },
+          video: {
+               facingMode: "user",
+               width: { min: 0, ideal: 320, max: 320 },
+               height: { min: 0, ideal: 240, max: 240 },
+               frameRate: { ideal: 15, max: 30 },
+          },
+     };
 
 
      initializeMedia = async () => {
@@ -22,7 +38,7 @@ class camera extends Component {
           }
 
           if (!("getUserMedia" in navigator.mediaDevices)) {
-               navigator.mediaDevices.getUserMedia = function (constraints) {
+               navigator.mediaDevices.getUserMedia = function (CONSTRAINTS) {
                     var getUserMedia =
                          navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
@@ -31,7 +47,7 @@ class camera extends Component {
                     }
 
                     return new Promise((resolve, reject) => {
-                         getUserMedia.call(navigator, constraints, resolve, reject);
+                         getUserMedia.call(navigator, CONSTRAINTS, resolve, reject);
                     });
                };
           }
@@ -152,13 +168,13 @@ class camera extends Component {
           const playerORImage = Boolean(this.state.imageDataURL) ? (
                <div className="capturedImg"> <img src={this.state.imageDataURL} alt="cameraPic" /></div>
           ) : (
-               <div className="videocenter">
+               
                     <video
                          ref={(refrence) => {
                               this.player = refrence;
                          }}
                          autoPlay
-                    ></video></div>
+                    ></video>
           );
 
 
@@ -169,7 +185,7 @@ class camera extends Component {
                          <div class="BUTTON1toBUTTON3">
                               <label>
                                    <input type="checkbox" />
-                                   <span  onClick={this.initializeMedia}class="seatButton">START CAMERA</span>
+                                   <span onClick={this.initializeMedia} class="seatButton">START CAMERA</span>
                               </label>
                               <span ><img src="https://img.icons8.com/color/15/000000/right--v1.png" /></span>
                               <label>
@@ -179,9 +195,9 @@ class camera extends Component {
                               <span ><img src="https://img.icons8.com/color/15/000000/right--v1.png" /></span>
                               <label>
                                    <input type="checkbox" />
-                                   <span  onClick={this.uploadImage} class="seatButton">SEND PICTURE</span>
+                                   <span onClick={this.uploadImage} class="seatButton">SEND PICTURE</span>
                               </label>
-                              
+
                          </div>
                     </div>
                     <button className="switchButton" onClick={this.switchCamera}>SWITCH CAMERA</button>
