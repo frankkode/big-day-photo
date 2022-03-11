@@ -12,23 +12,6 @@ class camera extends Component {
           };
      }
 
-     CONSTRAINTS = {
-          audio: {
-               autoGainControl: false,
-               channelCount: 2,
-               echoCancellation: true,
-               noiseSuppression: true,
-               sampleRate: 48000,
-               sampleSize: 16,
-          },
-          video: {
-               facingMode: "user",
-               width: { min: 0, ideal: 320, max: 320 },
-               height: { min: 0, ideal: 240, max: 240 },
-               frameRate: { ideal: 15, max: 30 },
-          },
-     };
-
 
      initializeMedia = async () => {
           this.setState({ imageDataURL: null });
@@ -37,21 +20,15 @@ class camera extends Component {
                navigator.mediaDevices = {};
           }
 
-          if (!("getUserMedia" in navigator.mediaDevices)) {
-               navigator.mediaDevices.getUserMedia = function (CONSTRAINTS) {
-                    var getUserMedia =
-                         navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-
-                    if (!getUserMedia) {
-                         return Promise.reject(new Error("getUserMedia Not Implemented"));
-                    }
-
-                    return new Promise((resolve, reject) => {
-                         getUserMedia.call(navigator, CONSTRAINTS, resolve, reject);
-                    });
-               };
+          async function init(constraints) {
+               try {
+                    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                    handleSuccess(stream);
+               } catch (e) {
+                    console.error('navigator.getUserMedia error:', e);
+                    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+               }
           }
-
           //Get the details of video inputs of the device
           const videoInputs = await this.getListOfVideoInputs();
 
@@ -168,13 +145,13 @@ class camera extends Component {
           const playerORImage = Boolean(this.state.imageDataURL) ? (
                <div className="capturedImg"> <img src={this.state.imageDataURL} alt="cameraPic" /></div>
           ) : (
-               
-                    <video
-                         ref={(refrence) => {
-                              this.player = refrence;
-                         }}
-                         autoPlay
-                    ></video>
+
+               <video
+                    ref={(refrence) => {
+                         this.player = refrence;
+                    }}
+                    autoPlay
+               ></video>
           );
 
 
@@ -187,12 +164,12 @@ class camera extends Component {
                                    <input type="checkbox" />
                                    <span onClick={this.initializeMedia} class="seatButton">START CAMERA</span>
                               </label>
-                              <span ><img src="https://img.icons8.com/color/15/000000/right--v1.png" /></span>
+                              <span ><img src="https://img.icons8.com/external-those-icons-fill-those-icons/15/000000/external-down-arrows-those-icons-fill-those-icons-2.png"/></span>
                               <label>
                                    <input type="checkbox" />
                                    <span onClick={this.capturePicture} class="seatButton">CAPTURE</span>
                               </label>
-                              <span ><img src="https://img.icons8.com/color/15/000000/right--v1.png" /></span>
+                              <span ><img src="https://img.icons8.com/external-those-icons-fill-those-icons/15/000000/external-down-arrows-those-icons-fill-those-icons-2.png"/></span>
                               <label>
                                    <input type="checkbox" />
                                    <span onClick={this.uploadImage} class="seatButton">SEND PICTURE</span>

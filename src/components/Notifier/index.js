@@ -8,7 +8,7 @@ class Notifier extends Component {
           });
           const message = this.props.offline ?
                `
-               Image saved locally, it will be uploaded to bride and groom once internet connection is detected.
+               You are offline, no worries send pictures.
         ` :
                `
           Take a picture it will be uploaded to groom and bride.

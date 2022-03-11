@@ -29,20 +29,23 @@ a {
 }
 video{
   border-radius: 4px;  
-  justify-content: center;
   display: flex;
-  height: 400px;
+  height: 300px;
   width: 400px;
-}
-.videocenter{
-  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d2VkZGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60');
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
   justify-content: center;
-
+  align-items: right;
+  text-align: center;
+  padding: 0px;
+  margin-bottom: 10px;
 }
+
 .capturedImg{
   align-items: center;
   justify-content: center;
-
 }
 img{
   border-radius: 4px;
@@ -86,17 +89,18 @@ button:hover{
   display: flex;
   color: white;
   border-radius: 5px;
-  background-color: #f59265;
+  
   border: 3px solid rgb(255, 60, 0);
   font-family: 'Times New Roman', Times, serif;
 }
 button{
   margin: 10px;
   padding: 10px;
-  color: white;
+  background-color: transparent;
+  color: rgb(255, 0, 128);
+  transition: all .5s;
   border-radius: 5px;
-  background-color: #f59265;
-  border: 3px solid rgb(255, 60, 0);
+  border: 3px solid rgb(255, 0, 128);
 }
 
 .BUTTON1toBUTTON3 input { display: none; }
@@ -104,38 +108,39 @@ button{
 .BUTTON1toBUTTON3 .seatButton { 
   margin: 10px;
   padding: 10px;
-  color: white;
+  color: rgb(255, 0, 128);
   display: flex;
   justify-content: center;
   border-radius: 5px;
-  background-color: #f59265;
-  border: 3px solid rgb(255, 60, 0); cursor: pointer; }
+  background-color: transparent;
+  border: 3px solid rgb(255, 0, 128); cursor: pointer; }
 
-.BUTTON1toBUTTON3 input:checked + .seatButton { background: rgb(136, 255, 0); }
+.BUTTON1toBUTTON3 input:checked + .seatButton { background: rgb(165, 243, 195); }
 .BUTTON1toBUTTON3 .seatButton:hover{
-  background-color: #00C2A8;
+  background-color: #59e6d3;
 }
 
 .BUTTON-START{
-  background-color:rgb(255, 196, 0);
+  background-color:rgb(252, 250, 249);
   border-radius: 4px;
   display: flex;
   justify-content: center;  
 }
 
 .notify{
-  background-color: #00C2A8;
+  background-color: #f9fcfb;
   padding: 20px;
   text-align: center;
-  color: white;
+  color: rgb(190, 134, 117);
   margin-bottom: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 4px;
 }
 
 .danger{
-  background-color: #FF8066;
-  color: rgb(245, 240, 240);
+  background-color: #f1bfb5;
+  color: rgb(32, 18, 18);
+  font-weight: 300;
   border-radius: 4px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

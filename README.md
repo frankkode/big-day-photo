@@ -63,6 +63,14 @@ Image capture
 
 
 ### Live app
+- live app on phone
+
+  ![alt text](public/home.png)
+
+- live app on computer
+
+  ![alt text](public/home2.png)
+
 - live app and image model
 
   ![alt text](public/model.gif)
