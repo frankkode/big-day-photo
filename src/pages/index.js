@@ -20,7 +20,6 @@ export default function Home({ images: defaultImages, nextCursor: defaultNextCur
     window.location.reload();
   }
 
-
   async function handleOnLoadMore(e) {
     e.preventDefault();
 

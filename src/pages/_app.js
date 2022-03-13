@@ -5,7 +5,7 @@ import { useEffect } from "react"
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     if ("serviceWorker" in navigator) {
-      window.addEventListener("load", function () {
+      if (window.isSecureContext) {
         navigator.serviceWorker.register("/sw.js").then(
           function (registration) {
             console.log(
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
             console.log("Service Worker registration failed: ", err);
           }
         );
-      });
+      };
     }
   }, [])
   

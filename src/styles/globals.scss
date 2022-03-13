@@ -89,10 +89,13 @@ button:hover{
   display: flex;
   color: white;
   border-radius: 5px;
-  
   border: 3px solid rgb(255, 60, 0);
   font-family: 'Times New Roman', Times, serif;
 }
+.BUTTON1toBUTTON3 .seatButtonSend:disabled {
+  opacity: 0.5;
+}
+
 button{
   margin: 10px;
   padding: 10px;
@@ -101,7 +104,21 @@ button{
   transition: all .5s;
   border-radius: 5px;
   border: 3px solid rgb(255, 0, 128);
+  font-family: 'Times New Roman', Times, serif;
 }
+
+.BUTTON1toBUTTON3 input:checked + .seatButtonSend { background: rgb(243, 165, 217);color: black; }
+
+.BUTTON1toBUTTON3 .seatButtonSend{ 
+  margin: 10px;
+  padding: 10px;
+  color: rgb(255, 0, 128);
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 3px solid rgb(255, 0, 128); cursor: pointer; }
 
 .BUTTON1toBUTTON3 input { display: none; }
 
@@ -111,6 +128,7 @@ button{
   color: rgb(255, 0, 128);
   display: flex;
   justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
   border-radius: 5px;
   background-color: transparent;
   border: 3px solid rgb(255, 0, 128); cursor: pointer; }
@@ -145,4 +163,17 @@ button{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.spinner {
+  animation: spin infinite 5s linear;
+
+}
+
+@keyframes spin {
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
+}
 
