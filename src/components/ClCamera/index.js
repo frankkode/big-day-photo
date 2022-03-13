@@ -175,7 +175,7 @@ class camera extends Component {
                          <div className="BUTTON1toBUTTON3">
                               <label>
                                    <input type="checkbox" />
-                                   <span onClick={this.initializeMedia} className="seatButton">START CAMERA</span>
+                                   <span accept="image/*" capture="environment" onClick={this.initializeMedia} className="seatButton">START CAMERA</span>
                               </label>
                               <span ><img src="https://img.icons8.com/external-those-icons-fill-those-icons/15/000000/external-down-arrows-those-icons-fill-those-icons-2.png" /></span>
                               <label>
