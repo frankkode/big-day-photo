@@ -19,7 +19,8 @@ self.addEventListener("install", function (event) {
           'https://unpkg.com/cloudinary-core@2.3.0/cloudinary-core.js',
           'https://unpkg.com/cloudinary-react@1.0.3/dist/cloudinary-react.js',
           'https://unpkg.com/axios/dist/axios.min.js',
-          'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'
+          'https://fontawesome.com/',
+          'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"'
      ];
 
      // A new ServiceWorker has been registered

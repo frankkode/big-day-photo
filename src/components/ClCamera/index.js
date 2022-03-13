@@ -182,7 +182,6 @@ class camera extends Component {
                                    <input type="checkbox" />
                                    <span onClick={this.uploadImage} disabled={loading} className="seatButtonSend">{loading && (
                                         <FontAwesomeIcon icon={faCameraRotate} className="spinner"
-
                                              style={{ marginRight: "5px" }}
                                         />
 
