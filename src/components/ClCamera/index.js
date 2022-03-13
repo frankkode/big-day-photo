@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCameraRotate, faClose } from '@fortawesome/free-solid-svg-icons'
+import { faCameraRotate,faTimesSquare } from '@fortawesome/free-solid-svg-icons'
 
 class camera extends Component {
      constructor() {
@@ -199,8 +199,7 @@ class camera extends Component {
                     </div>
                     <span onClick={this.switchCamera}><FontAwesomeIcon icon={faCameraRotate} className="rotate" /></span>
 
-                    <span onClick={this.refreshPage}><FontAwesomeIcon icon={faClose
-                    } className='close' /></span>
+                    <span onClick={this.refreshPage}><FontAwesomeIcon icon={faTimesSquare} className='close' /></span>
 
 
                </div>
