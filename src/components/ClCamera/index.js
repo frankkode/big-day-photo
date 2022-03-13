@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCameraRotate} from '@fortawesome/free-solid-svg-icons'
+import { faCameraRotate, faClose } from '@fortawesome/free-solid-svg-icons'
 
 class camera extends Component {
      constructor() {
@@ -16,6 +16,7 @@ class camera extends Component {
      state = {
           loading: false
      };
+
 
 
      initializeMedia = async () => {
@@ -43,7 +44,7 @@ class camera extends Component {
           //The device has a camera
           if (videoInputs.length) {
                navigator.mediaDevices
-                    .getUserMedia({video: true})
+                    .getUserMedia({ video: true })
                     .then((stream) => {
                          this.player.srcObject = stream;
                     })
@@ -148,6 +149,10 @@ class camera extends Component {
           }
      };
 
+     refreshPage = () => {
+          window.location.reload();
+     }
+
      render() {
           const { loading } = this.state;
           const playerORImage = Boolean(this.state.imageDataURL) ? (
@@ -192,7 +197,10 @@ class camera extends Component {
 
                          </div>
                     </div>
-                    <button className="switchButton" onClick={this.switchCamera}>SWITCH CAMERA</button>
+                    <span onClick={this.switchCamera}><FontAwesomeIcon icon={faCameraRotate} className="rotate" /></span>
+
+                    <span onClick={this.refreshPage}><FontAwesomeIcon icon={faClose
+                    } className='close' /></span>
 
 
                </div>

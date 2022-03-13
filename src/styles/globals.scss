@@ -96,18 +96,28 @@ button:hover{
   opacity: 0.5;
 }
 
-button{
+.close{
   margin: 10px;
   padding: 10px;
-  background-color: transparent;
-  color: rgb(255, 0, 128);
-  transition: all .5s;
-  border-radius: 5px;
-  border: 3px solid rgb(255, 0, 128);
-  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+  height: 50px;
+  color: orange;
+
+
 }
 
+
 .BUTTON1toBUTTON3 input:checked + .seatButtonSend { background: rgb(243, 165, 217);color: black; }
+
+
+.rotate{
+  color: orchid;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  height: 50px;
+
+}
 
 .BUTTON1toBUTTON3 .seatButtonSend{ 
   margin: 10px;
@@ -119,6 +129,18 @@ button{
   border-radius: 5px;
   background-color: transparent;
   border: 3px solid rgb(255, 0, 128); cursor: pointer; }
+.seatButtonSend:hover{
+  background-color: #59e6d3;
+  margin: 10px;
+  padding: 10px;
+  color: rgb(255, 0, 128);
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  justify-content: center;
+  border-radius: 5px;
+  border: 3px solid rgb(255, 0, 128);
+  cursor: pointer; 
+  }
 
 .BUTTON1toBUTTON3 input { display: none; }
 

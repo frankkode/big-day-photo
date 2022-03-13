@@ -16,9 +16,6 @@ export default function Home({ images: defaultImages, nextCursor: defaultNextCur
   const [images, setImages] = useState(defaultImages);
   const [selectedImg, setSelectedImg] = useState(null);
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
-  const refreshPage = () => {
-    window.location.reload();
-  }
 
   async function handleOnLoadMore(e) {
     e.preventDefault();
@@ -66,7 +63,6 @@ export default function Home({ images: defaultImages, nextCursor: defaultNextCur
               Wedding Images
             </h1>
             <Camera />
-            <button className='closeButton' onClick={refreshPage}>OFF CAMERA</button>
 
           </main>
         </div>
