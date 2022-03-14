@@ -29,15 +29,6 @@ class camera extends Component {
                navigator.mediaDevices = {};
           }
 
-          async function init(constraints) {
-               try {
-                    const stream = await navigator.mediaDevices.getUserMedia(constraints);
-                    handleSuccess(stream);
-               } catch (e) {
-                    console.error('navigator.getUserMedia error:', e);
-                    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
-               }
-          }
           //Get the details of video inputs of the device
           const videoInputs = await this.getListOfVideoInputs();
 
