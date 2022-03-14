@@ -13,8 +13,17 @@ This App is progressive web app (PWA)
    ![alt text](public/pwa.png)
 
 
-Image capture
+Image capture (Live App)
    ![alt text](public/camera.png)
+
+pop up app installation (Live App)
+   ![alt text](public/test6.jpg)
+
+ask if you are sure to install(Live App)
+   ![alt text](public/test7.jpg)
+
+Install on the phone (Live App)
+   ![alt text](public/test8.jpg)
 
 
 ## Quick Start
