@@ -17,17 +17,8 @@ class camera extends Component {
           loading: false
      };
 
-
-
      initializeMedia = async () => {
-          const constraints = {
-               video: true
-          }
           this.setState({ imageDataURL: null });
-
-          if (!("mediaDevices" in navigator)) {
-               navigator.mediaDevices = {};
-          }
 
           //Get the details of video inputs of the device
           const videoInputs = await this.getListOfVideoInputs();
@@ -35,7 +26,7 @@ class camera extends Component {
           //The device has a camera
           if (videoInputs.length) {
                navigator.mediaDevices
-                    .getUserMedia({ video: {width:1920, height:1080} })
+                    .getUserMedia({ video: {width:400} })
                     .then((stream) => {
                          this.player.srcObject = stream;
                     })
