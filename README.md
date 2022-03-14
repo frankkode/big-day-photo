@@ -17,13 +17,13 @@ Image capture (Live App)
    ![alt text](public/camera.png)
 
 pop up app installation (Live App)
-   ![alt text](public/test6.jpg)
+   ![alt text](public/test6.JPG)
 
 ask if you are sure to install(Live App)
-   ![alt text](public/test7.jpg)
+   ![alt text](public/test7.JPG)
 
 Install on the phone (Live App)
-   ![alt text](public/test8.jpg)
+   ![alt text](public/test8.JPG)
 
 
 ## Quick Start
