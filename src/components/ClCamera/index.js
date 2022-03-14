@@ -35,7 +35,7 @@ class camera extends Component {
           //The device has a camera
           if (videoInputs.length) {
                navigator.mediaDevices
-                    .getUserMedia({ video: true })
+                    .getUserMedia({ video: {width:1920, height:1080} })
                     .then((stream) => {
                          this.player.srcObject = stream;
                     })
